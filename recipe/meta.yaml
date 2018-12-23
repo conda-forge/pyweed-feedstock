@@ -18,13 +18,13 @@ build:
     - pyweed = pyweed.pyweed_launcher:launch
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
     - python
     - obspy
-    - pyqt 4.11*
+    - pyqt
     - qtconsole
     - basemap
     - pyproj
