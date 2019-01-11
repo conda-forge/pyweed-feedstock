@@ -1,6 +1,6 @@
 {% set name = "pyweed" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "5ad608df76adb0bdd5db509123ca0c5c5cd304960e140141fb5f76bed6a8aa18" %}
+{% set version = "1.0.1a1" %}
+{% set sha256 = "2a0e1e12e59e48447a01ccfc88f400edc1af71a3938862a82de7d4d50fbe3c4c" %}
 
 package:
   name: {{ name }}
@@ -22,13 +22,19 @@ requirements:
     - python
     - setuptools
   run:
-    - python
-    - obspy
-    - pyqt
-    - qtconsole
+    - python 3.6*
     - basemap
-    - pyproj
+    - future
+    - matplotlib 2*
+    - obspy 1.1*
+    - pandas
     - pillow
+    - pyqt 4.11*
+    - qtconsole
+    - pyzmq
+    - pyproj
+    - proj4
+
 
 test:
   imports:
