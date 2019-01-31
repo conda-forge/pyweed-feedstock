@@ -1,6 +1,6 @@
 {% set name = "pyweed" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "5ad608df76adb0bdd5db509123ca0c5c5cd304960e140141fb5f76bed6a8aa18" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "58cca3dba772ce3fa14b0d71f5313b55913f044efb393c55dc0dcf4fe5213a61" %}
 
 package:
   name: {{ name }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py2k]
   entry_points:
