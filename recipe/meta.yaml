@@ -13,7 +13,9 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
+  # pyqt and obspy greatly restrict the available platforms here
   skip: True  # [py2k]
+  skip: True  # [py>36]
   entry_points:
     - pyweed = pyweed.pyweed_launcher:launch
 
@@ -23,12 +25,18 @@ requirements:
     - setuptools
   run:
     - python
-    - obspy
-    - pyqt
-    - qtconsole
     - basemap
-    - pyproj
+    - future
+    - matplotlib 2*
+    - obspy 1.1*
+    - pandas
     - pillow
+    - pyqt 4.11*
+    - qtconsole
+    - pyzmq
+    - pyproj
+    - proj4
+
 
 test:
   imports:
