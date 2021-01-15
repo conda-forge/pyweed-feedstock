@@ -1,6 +1,6 @@
 {% set name = "pyweed" %}
-{% set version = "1.0.6.dev0" %}
-{% set sha256 = "db1c789e6017ebd64587fd477caa9c710a7b81c1761458f8b3cb8f7bef12e559" %}
+{% set version = "1.0.6" %}
+{% set sha256 = "f81eff72fc04a7ea5fc4a97fdaee97b90a63c001e4e5ac52a93fb238e3825226" %}
 
 package:
   name: {{ name }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   # pyqt and obspy greatly restrict the available platforms here
   skip: True  # [py2k]
@@ -25,8 +25,9 @@ requirements:
   run:
     - python
     - basemap
-    - matplotlib 3.2.*
+    - matplotlib-base
     - obspy 1.2.*
+    - pillow
     - pyqt 5.9.*
     - pyproj
 
