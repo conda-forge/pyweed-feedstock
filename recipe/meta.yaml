@@ -1,6 +1,6 @@
 {% set name = "pyweed" %}
-{% set version = "1.0.5" %}
-{% set sha256 = "c3a812ad70723dac62d34e5a6abffb7966c60d188cd1adb57b62a170f63e412e" %}
+{% set version = "1.0.6.dev0" %}
+{% set sha256 = "db1c789e6017ebd64587fd477caa9c710a7b81c1761458f8b3cb8f7bef12e559" %}
 
 package:
   name: {{ name }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   # pyqt and obspy greatly restrict the available platforms here
   skip: True  # [py2k]
@@ -25,16 +25,10 @@ requirements:
   run:
     - python
     - basemap
-    - future
-    - matplotlib
-    - obspy 1.1*
-    - pandas
-    - pillow
-    - pyqt 5.6*
-    - qtconsole
-    - pyzmq
+    - matplotlib 3.2.*
+    - obspy 1.2.*
+    - pyqt 5.9.*
     - pyproj
-    - proj4 5*
 
 
 test:
@@ -46,7 +40,7 @@ test:
 about:
   home: https://iris-edu.github.io/pyweed/
   dev_url: https://github.com/iris-edu/pyweed
-  license: LGPL-3.0
+  license: LGPL-3.0-or-later
   license_file: LICENSE
   summary: "PyWEED: A cross-platform app for retrieving event-based seismic data."
 
