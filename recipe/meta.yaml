@@ -40,7 +40,7 @@ test:
 about:
   home: https://iris-edu.github.io/pyweed/
   dev_url: https://github.com/iris-edu/pyweed
-  license: LGPL-3.0
+  license: LGPL-3.0-or-later
   license_file: LICENSE
   summary: "PyWEED: A cross-platform app for retrieving event-based seismic data."
 
