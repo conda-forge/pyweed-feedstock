@@ -1,6 +1,6 @@
 {% set name = "pyweed" %}
-{% set version = "1.0.6" %}
-{% set sha256 = "f81eff72fc04a7ea5fc4a97fdaee97b90a63c001e4e5ac52a93fb238e3825226" %}
+{% set version = "1.0.7" %}
+{% set sha256 = "16e904aa9a774242cebfef6a69710904c5d6b3df67abbf2d902a3c8b16bee84a" %}
 
 package:
   name: {{ name }}
@@ -11,10 +11,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   # pyqt and obspy greatly restrict the available platforms here
-  skip: True  # [py2k]
+  skip: true  # [py2k]
   entry_points:
     - pyweed = pyweed.pyweed_launcher:launch
 
