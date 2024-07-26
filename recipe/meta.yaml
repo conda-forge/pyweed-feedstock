@@ -1,5 +1,6 @@
 {% set name = "pyweed" %}
 {% set version = "1.0.9" %}
+{% set build_number = 3 %}
 {% set sha256 = "6cadc138306134085ef09a979bb788179627b4dfb1dbbd401756076f1db3949d" %}
 
 package:
@@ -11,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: {{ build_number }}
   skip: True  # [py>=312]
   entry_points:
     - pyweed = pyweed.pyweed_launcher:launch
