@@ -1,7 +1,7 @@
 {% set name = "pyweed" %}
-{% set version = "1.0.11" %}
+{% set version = "1.0.12" %}
 {% set build_number = 0 %}
-{% set sha256 = "fe3214c1d0cc44ccfaf6b7381cff40fd6188bc51028f2174bad0ec0a144bb7ce" %}
+{% set sha256 = "7f2e057f3a014d16492373d6cbee1d49d0f917f8a92a86cce97fc3098c4312b1" %}
 
 package:
   name: {{ name }}
